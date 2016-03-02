@@ -18,9 +18,9 @@ chords = [upmBuzzer.DO, upmBuzzer.RE, upmBuzzer.MI, upmBuzzer.FA,
           upmBuzzer.SI];
 
 # Make a DO sound if button value is True and change myLcd color to a random value.
+contador = 0
 while 1:
 	myLcd.setCursor(0,0)
-	contador = 0
     	if button.value():
 	          myLcd.setColor(random.randint(0,255),random.randint(0,255),random.randint(0,255))
 	          print buzzer.playSound(chords[0], 1000000)
