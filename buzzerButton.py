@@ -12,9 +12,9 @@ chords = [upmBuzzer.DO, upmBuzzer.RE, upmBuzzer.MI, upmBuzzer.FA,
           upmBuzzer.SOL, upmBuzzer.LA, upmBuzzer.SI, upmBuzzer.DO, 
           upmBuzzer.SI];
 
-# Read the input and print status of the button and make a DO sound, waiting one second between readings.
+# Make a DO sound if button value is True.
 while 1:
-    if button.value() == 1:
+    if button.value():
           print buzzer.playSound(chords[0], 1000000)
     #time.sleep(1)
 
