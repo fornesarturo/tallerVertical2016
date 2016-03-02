@@ -14,11 +14,9 @@ chords = [upmBuzzer.DO, upmBuzzer.RE, upmBuzzer.MI, upmBuzzer.FA,
 
 # Read the input and print status of the button and make a DO sound, waiting one second between readings.
 while 1:
-    print button.name(), ' value is ', button.value()
-    print buzzer.playSound(chords[0], 1000000)
-    time.sleep(1)
-
-print "exiting application"
+    if button.value() == 1:
+          print buzzer.playSound(chords[0], 1000000)
+    #time.sleep(1)
 
 # Delete the buzzer object
 del buzzer
